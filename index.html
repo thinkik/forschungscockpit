@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forschungscockpit WiWi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Bachelor WiWi · Wissenschaftliches Arbeiten</p>
+      <h1>Forschungscockpit: Dein Flugplan zur wissenschaftlichen Arbeit</h1>
+      <p class="hero__lead">
+        Du bist Pilot·in. Kit Copilot. Diese interaktive Übersicht begleitet dich durch alle Flight-Level des Forschungsprozesses – von der Idee bis zur Präsentation.
+      </p>
+      <a class="btn btn--primary" href="#flightpath">Zum Flightpath</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="flight-rules" aria-labelledby="flight-rules-heading">
+      <div class="section-heading">
+        <h2 id="flight-rules-heading">AI-Leadership / Flight Rules</h2>
+        <p>Saubere wissenschaftliche Arbeit kombiniert klassische Methoden mit verantwortungsvoller KI-Nutzung.</p>
+      </div>
+      <div class="rules-grid">
+        <article class="rule-card">
+          <h3>1. Klare Papers, verlässliche Quellen</h3>
+          <ul>
+            <li>Nutze Peer-Review-Artikel aus <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://www.wiso-net.de/" target="_blank" rel="noopener">WISO</a> &amp; Co.</li>
+            <li>Bewerte Quellen kritisch und dokumentiere jeden Schritt.</li>
+          </ul>
+        </article>
+        <article class="rule-card">
+          <h3>2. KI nur, wenn du die Kontrolle behältst</h3>
+          <ul>
+            <li>Prüfe KI-Ergebnisse auf Bias und Faktentreue.</li>
+            <li>Nutze KI als Ideengeber, nicht als Ersatz für deine Analyse.</li>
+          </ul>
+        </article>
+        <article class="rule-card">
+          <h3>3. Checkpoints &amp; Feedback</h3>
+          <ul>
+            <li>Plane Meilensteine und hole frühzeitig Feedback von Betreuenden ein.</li>
+            <li>Protokolliere Entscheidungen im Forschungslogbuch.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="flightpath" class="flightpath" aria-labelledby="flightpath-heading">
+      <div class="section-heading">
+        <h2 id="flightpath-heading">Flightpath – Schritte des wissenschaftlichen Arbeitens</h2>
+        <p>Wähle einen Flight-Level, um passende klassische und KI-gestützte Tools zu entdecken.</p>
+      </div>
+
+      <div class="legend" role="group" aria-label="Darstellungsoptionen">
+        <button class="legend__toggle legend__toggle--active" data-view="both" aria-pressed="true">Klassisch &amp; KI</button>
+        <button class="legend__toggle" data-view="classic" aria-pressed="false">Nur klassisch</button>
+        <button class="legend__toggle" data-view="ai" aria-pressed="false">Nur KI</button>
+      </div>
+
+      <div class="flightpath__layout">
+        <nav class="flightpath__steps" aria-label="Flight-Level">
+          <ol id="flight-steps" class="step-list"></ol>
+        </nav>
+        <section id="step-detail" class="step-detail" aria-live="polite"></section>
+      </div>
+    </section>
+
+    <section class="next-step" aria-labelledby="next-step-heading">
+      <div class="section-heading">
+        <h2 id="next-step-heading">Mein nächster Schritt</h2>
+        <p>Wähle deinen Status, um passende Handlungsempfehlungen zu erhalten.</p>
+      </div>
+      <div class="next-step__controls">
+        <label for="status-select" class="visually-hidden">Status auswählen</label>
+        <select id="status-select">
+          <option value="idee">Ich starte mit einer Idee (0/10)</option>
+          <option value="struktur">Ich habe eine grobe Struktur (3/10)</option>
+          <option value="daten">Ich sammle Daten (6/10)</option>
+          <option value="schreiben">Ich schreibe / finalisiere (8/10)</option>
+        </select>
+      </div>
+      <div id="status-recommendations" class="recommendations" aria-live="polite"></div>
+    </section>
+
+    <section class="support" aria-labelledby="support-heading">
+      <div class="section-heading">
+        <h2 id="support-heading">Unterstützung &amp; Kontakt</h2>
+        <p>Nutze Supportangebote deiner Hochschule und vernetze dich mit Mitstudierenden.</p>
+      </div>
+      <div class="support__grid">
+        <article class="support-card">
+          <h3>Schreibwerkstatt &amp; Lerncoaches</h3>
+          <p>Buche individuelle Beratung, um Struktur, Argumentationslogik oder Zitierfragen zu klären.</p>
+          <a class="btn btn--ghost" href="https://www.thi.de/servicebereich/lerncoaching/" target="_blank" rel="noopener">Termin vereinbaren</a>
+        </article>
+        <article class="support-card">
+          <h3>KI-Helpdesk</h3>
+          <p>Erhalte Unterstützung bei der Auswahl geeigneter KI-Tools und bei Fragen zur verantwortungsvollen Nutzung.</p>
+          <a class="btn btn--ghost" href="https://ki-campus.org/" target="_blank" rel="noopener">KI-Campus besuchen</a>
+        </article>
+        <article class="support-card">
+          <h3>Research Buddies</h3>
+          <p>Arbeite in Fokus-Sessions zusammen, teile Ressourcen und motiviere dich gegenseitig.</p>
+          <a class="btn btn--ghost" href="https://www.focusmate.com/" target="_blank" rel="noopener">Focusmate entdecken</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h2>Forschungslogbuch</h2>
+      <p>Halte deine Lernziele, Quellen und Entscheidungen transparent fest – so bleibt deine wissenschaftliche Arbeit nachvollziehbar.</p>
+    </div>
+    <div class="footer__links">
+      <a href="#flightpath">Flightpath</a>
+      <a href="#support-heading">Support</a>
+      <a href="mailto:forschungscoach@example.edu">Kontakt</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
